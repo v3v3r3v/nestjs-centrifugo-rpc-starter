@@ -1,0 +1,4 @@
+config.local.yaml
+auth-secret-key
+auth-secret-key.pub
+/centrifugo.local.json

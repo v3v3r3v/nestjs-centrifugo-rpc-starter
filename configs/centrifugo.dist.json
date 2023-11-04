@@ -1,0 +1,27 @@
+{
+  "token_hmac_secret_key": "d7125d33-259b-4b20-876b-262d26c8a8d6",
+  "admin_password": "bcc5b3f3-3c97-4d4c-9ea8-fc91006ca71c",
+  "admin_secret": "b4c6caea-7f71-4aa0-a4c0-aefb1c080287",
+  "api_key": "45e34119-13b5-42df-9f99-0e4aded994c5",
+  "allowed_origins": ["http://localhost:5173"],
+
+  "admin": true,
+  "debug": true,
+  "allow_subscribe_for_client": true,
+
+  "grpc_api": true,
+  "granular_proxy_mode": true,
+  "proxies": [
+    {
+      "name": "nestjs_rpc",
+      "endpoint": "grpc://localhost:5005",
+      "timeout": "1s"
+    }
+  ],
+  "rpc_namespaces": [
+    {
+      "name": "EchoService",
+      "rpc_proxy_name": "nestjs_rpc"
+    }
+  ]
+}
